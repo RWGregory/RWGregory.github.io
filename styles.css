@@ -37,6 +37,10 @@ main {
   padding: 1rem;
 }
 
+.media {
+  display: grid;
+}
+
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
