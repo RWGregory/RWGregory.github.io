@@ -2,7 +2,7 @@
   font-size: 16px;
   font-family: 'Open Sans';
   --text-primary: #b6b6b6;
-  --text-secondary: #ff7eee;
+  --text-secondary: #ffa9f4;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 300ms;
@@ -10,7 +10,7 @@
 
 body {
   color: rgb(8, 45, 78);
-  background-color: rgb(180, 234, 255);
+  background-color: rgb(225, 246, 255);
   margin-left: 0;
   padding: 0;
 }
@@ -21,15 +21,16 @@ pre {
 }
 
 body::-webkit-scrollbar {
-  width: 1.25rem;
+  width: 0.75rem;
 }
 
 body::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: var(--bg-primary);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: rgb(102, 73, 184);
+  max-height: 6rem;
+  background: var(--text-primary);
 }
 
 main {
@@ -37,8 +38,11 @@ main {
   padding: 1rem;
 }
 
-.media {
-  display: grid;
+.replacement {
+  position: relative;
+}
+.top-img {
+  position: absolute;
 }
 
 .navbar {
