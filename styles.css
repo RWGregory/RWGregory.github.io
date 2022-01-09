@@ -36,6 +36,9 @@ body::-webkit-scrollbar-thumb {
 main {
   margin-left: 16rem;
   padding: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: var(--transition-speed);
 }
 
 .replacement {
