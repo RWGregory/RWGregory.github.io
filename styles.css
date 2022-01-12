@@ -1,16 +1,18 @@
 :root {
   font-size: 16px;
-  font-family: 'Open Sans';
+  font-family: 'Iconsolata', monospace;
   --text-primary: #b6b6b6;
   --text-secondary: #ffa9f4;
   --bg-primary: #23232e;
   --bg-secondary: #141418;
   --transition-speed: 300ms;
+  --body-bg-primary: rgb(225, 246, 255);
+  --body-text-primary: rgb(8, 45, 78);
 }
 
 body {
-  color: rgb(8, 45, 78);
-  background-color: rgb(225, 246, 255);
+  color: (--body-text-primary);
+  background-color: (--body-bg-primary);
   margin-left: 0;
   padding: 0;
 }
@@ -21,7 +23,7 @@ pre {
 }
 
 body::-webkit-scrollbar {
-  width: 0.75rem;
+  width: 0.25rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -34,10 +36,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
+  display: grid;
   margin-left: 16rem;
   padding: 1rem;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   transition: var(--transition-speed);
 }
 
@@ -77,6 +78,7 @@ main {
 .nav-link {
   display: flex;
   align-items: center;
+  margin: auto;
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
@@ -157,11 +159,17 @@ main {
 
   .nav-link {
     justify-content: center;
+    width: 1rem;
   }
 
   .nav-item {
     width: 100%;
-    padding: 0;
+    padding: 0 rem;
+  }
+
+  .nav-item:last-child {
+    margin: auto;
+    padding: 15px;
   }
 
   main {
